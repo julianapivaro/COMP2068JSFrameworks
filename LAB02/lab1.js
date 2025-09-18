@@ -7,7 +7,7 @@ prompt.start();
 // Define the rules for user input
 const rules = {
   properties: {
-    playerChoice: {
+    userSelection: {
       description: 'Choose ROCK, PAPER, or SCISSORS',
       pattern: /^(ROCK|PAPER|SCISSORS)$/i,
       message: 'Please enter ROCK, PAPER, or SCISSORS',
@@ -23,43 +23,43 @@ prompt.get(rules, function (err, response) {
     return;
   }
 
-  // Store player choice (convert to uppercase for consistency)
-  const playerChoice = response.playerChoice.toUpperCase();
+  // Store user choice (convert to uppercase for consistency)
+  const userSelection = response.userSelection.toUpperCase();
 
   // Generate computer choice using Math.random()
-  const randomValue = Math.random();
-  let cpuChoice;
+  const rand = Math.random();
+  let computerSelection;
 
-  if (randomValue >= 0.00 && randomValue <= 0.34) {
-    cpuChoice = 'PAPER';
-  } else if (randomValue >= 0.35 && randomValue <= 0.67) {
-    cpuChoice = 'SCISSORS';
-  } else { // 0.68 - 1.00
-    cpuChoice = 'ROCK';
+  if (rand <= 0.33) {
+    computerSelection = 'ROCK';
+  } else if (rand <= 0.66) {
+    computerSelection = 'PAPER';
+  } else {
+    computerSelection = 'SCISSORS';
   }
 
   // Display both choices
-  console.log('Player Pick:', playerChoice);
-  console.log('Computer Pick:', cpuChoice);
+  console.log('User Pick:', userSelection);
+  console.log('Computer Pick:', computerSelection);
 
-  // Determine the winner using switch statement
+  // Determine the winner
   let result;
 
-  if (playerChoice === cpuChoice) {
+  if (userSelection === computerSelection) {
     result = "It's a tie";
   } else {
-    switch (playerChoice) {
+    switch (userSelection) {
       case 'ROCK':
-        result = (cpuChoice === 'SCISSORS') ? 'Player Wins' : 'Computer Wins';
+        result = (computerSelection === 'SCISSORS') ? 'User Wins' : 'Computer Wins';
         break;
       case 'PAPER':
-        result = (cpuChoice === 'ROCK') ? 'Player Wins' : 'Computer Wins';
+        result = (computerSelection === 'ROCK') ? 'User Wins' : 'Computer Wins';
         break;
       case 'SCISSORS':
-        result = (cpuChoice === 'PAPER') ? 'Player Wins' : 'Computer Wins';
+        result = (computerSelection === 'PAPER') ? 'User Wins' : 'Computer Wins';
         break;
       default:
-        result = 'Invalid pick';
+        result = 'Invalid choice';
     }
   }
 
