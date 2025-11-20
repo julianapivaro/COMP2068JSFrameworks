@@ -1,0 +1,413 @@
+/* Custom Styles for Artisan Candles Website */
+:root {
+    --primary-color: #8B4513;
+    --secondary-color: #D2B48C;
+    --accent-color: #FF6B35;
+    --light-color: #F5F5DC;
+    --dark-color: #333333;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.8;
+    padding-top: 76px;
+    font-size: 18px;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 76px;
+}
+
+/* Navigation - Combined Bootstrap and custom classes */
+.site-nav.navbar {
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.brand-logo.navbar-brand {
+    font-weight: 600;
+    font-size: 1.5rem;
+}
+
+.nav-link {
+    font-size: 1.1rem;
+    padding: 0.5rem 1rem;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: var(--accent-color) ;
+}
+
+/* Main Showcase - Combined Bootstrap and custom classes */
+#home {
+    padding: 0 ;
+    margin: 0;
+}
+
+.main-showcase.carousel {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.showcase-slide.carousel-item {
+    height: 500px;
+}
+
+.showcase-slide.carousel-item img {
+    height: 500px;
+    width: 100%;
+    object-fit: cover;
+}
+
+.showcase-caption.carousel-caption {
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 20px 30px;
+    border-radius: 10px;
+}
+
+.showcase-caption h5 {
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.showcase-caption p {
+    font-size: 1.2rem;
+}
+
+.showcase-control.carousel-control-prev,
+.showcase-control.carousel-control-next {
+    background: rgba(0,0,0,0.5);
+    border: none;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+/* Content Container */
+.content-container.container {
+    max-width: 1400px ;
+    padding-left: 40px ;
+    padding-right: 40px ;
+}
+
+/* Section spacing */
+section {
+    padding: 80px 0;
+}
+
+.section-title {
+    margin-bottom: 3rem;
+    color: var(--primary-color);
+    font-weight: 700;
+    font-size: 2.5rem;
+    text-align: center;
+}
+
+section h3 {
+    color: var(--primary-color);
+    font-weight: 600;
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+}
+
+section p {
+    font-size: 1.15rem;
+    line-height: 1.8;
+}
+
+.intro-text.lead {
+    font-size: 1.3rem ;
+    font-weight: 400;
+}
+
+/* Buttons - Combined Bootstrap and custom classes */
+.action-btn.btn-custom {
+    background-color: var(--primary-color) ;
+    border-color: var(--primary-color) ;
+    color: white ;
+    font-weight: 600;
+    padding: 15px 40px;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+    border-radius: 8px;
+}
+
+.action-btn.btn-custom:hover {
+    background-color: var(--accent-color) ;
+    border-color: var(--accent-color) ;
+    color: white ;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.25);
+}
+
+.large-btn.btn-lg {
+    padding: 18px 50px ;
+    font-size: 1.3rem 
+}
+
+.outline-btn.btn-outline-custom {
+    border-color: var(--primary-color);
+    color: var(--primary-color);
+    background-color: transparent ;
+    font-weight: 600;
+    padding: 12px 30px;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+    border-width: 2px;
+    border-radius: 8px;
+}
+
+.outline-btn.btn-outline-custom:hover {
+    background-color: var(--primary-color) ;
+    border-color: var(--primary-color);
+    color: white ;
+    transform: translateY(-2px);
+}
+
+/* Feature Cards */
+.feature-card.icon-box {
+    padding: 40px 30px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 15px;
+    min-height: 380px;
+}
+
+.feature-card.icon-box:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+}
+
+.feature-icon {
+    transition: transform 0.3s ease;
+}
+
+.feature-card.icon-box:hover .feature-icon {
+    transform: scale(1.15);
+}
+
+.feature-card h4 {
+    font-size: 1.6rem;
+    font-weight: 600;
+    margin: 20px 0;
+    color: var(--primary-color);
+}
+
+.feature-card p {
+    font-size: 1.1rem;
+}
+
+/* Team Cards */
+.member-card.card {
+    border: none;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: 100%;
+    border-radius: 15px;
+}
+
+.member-card.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 25px rgba(0,0,0,0.2);
+}
+
+.member-name.card-title {
+    color: var(--primary-color);
+    font-weight: 600;
+    font-size: 1.5rem;
+}
+
+.member-role.card-text {
+    font-size: 1.05rem;
+    line-height: 1.7;
+}
+
+.member-photo.card-img-top {
+    border: 4px solid var(--secondary-color);
+    padding: 5px;
+    background-color: white;
+}
+
+/* FAQ Accordion */
+.faq-toggle.accordion-button {
+    background-color: var(--light-color);
+    color: var(--dark-color);
+    font-weight: 500;
+    font-size: 1.15rem;
+    padding: 1.25rem;
+}
+
+.faq-toggle.accordion-button:not(.collapsed) {
+    background-color: var(--secondary-color);
+    color: var(--dark-color);
+}
+
+.faq-toggle.accordion-button:focus {
+    box-shadow: 0 0 0 0.25rem rgba(139, 69, 19, 0.25);
+}
+
+.answer-content.accordion-body {
+    font-size: 1.05rem;
+    padding: 1.25rem;
+    line-height: 1.8;
+}
+
+/* Forms */
+.form-input.form-control,
+.form-select.form-select {
+    font-size: 1.05rem;
+    padding: 12px 15px;
+    border-radius: 8px;
+}
+
+.form-input.form-control:focus,
+.form-select.form-select:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 0.25rem rgba(139, 69, 19, 0.25);
+}
+
+.form-label {
+    font-weight: 500;
+    color: var(--dark-color);
+    font-size: 1.05rem;
+    margin-bottom: 0.5rem;
+}
+
+.form-textarea.form-control {
+    min-height: 120px;
+}
+
+/* Background sections */
+.about-section.bg-light,
+.process-section.bg-light,
+.faq-section.bg-light {
+    background-color: var(--light-color) ;
+}
+
+/* Images */
+.content-image.img-fluid {
+    border-radius: 10px;
+}
+
+/* Footer */
+.site-footer.bg-dark {
+    background-color: var(--dark-color) ;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+    .content-container.container {
+        max-width: 1140px ;
+        padding-left: 30px ;
+        padding-right: 30px ;
+    }
+}
+
+@media (max-width: 992px) {
+    section {
+        padding: 60px 0;
+    }
+    
+    .section-title {
+        font-size: 2.2rem;
+    }
+    
+    .showcase-slide.carousel-item,
+    .showcase-slide.carousel-item img {
+        height: 450px;
+    }
+}
+
+@media (max-width: 768px) {
+    body {
+        padding-top: 66px;
+        font-size: 16px;
+    }
+    
+    html {
+        scroll-padding-top: 66px;
+    }
+    
+    .content-container.container {
+        padding-left: 20px ;
+        padding-right: 20px;
+    }
+    
+    section {
+        padding: 50px 0;
+    }
+    
+    .section-title {
+        font-size: 2rem;
+    }
+    
+    section h3 {
+        font-size: 1.5rem;
+    }
+    
+    .showcase-slide.carousel-item,
+    .showcase-slide.carousel-item img {
+        height: 400px;
+    }
+    
+    .showcase-caption.carousel-caption {
+        padding: 15px 20px;
+    }
+    
+    .showcase-caption h5 {
+        font-size: 1.5rem;
+    }
+    
+    .showcase-caption p {
+        font-size: 1rem;
+    }
+    
+    .feature-card.icon-box {
+        margin-bottom: 30px;
+        min-height: auto;
+    }
+    
+    .action-btn.btn-custom,
+    .large-btn.btn-lg {
+        padding: 12px 30px ;
+        font-size: 1.05rem ;
+    }
+    
+    .footer-text.right.text-end {
+        text-align: center ;
+        margin-top: 10px;
+    }
+}
+
+@media (max-width: 576px) {
+    body {
+        font-size: 15px;
+    }
+    
+    .content-container.container {
+        padding-left: 15px ;
+        padding-right: 15px ;
+    }
+    
+    .section-title {
+        font-size: 1.75rem;
+    }
+    
+    .showcase-slide.carousel-item,
+    .showcase-slide.carousel-item img {
+        height: 300px;
+    }
+    
+    .brand-logo.navbar-brand {
+        font-size: 1.2rem;
+    }
+}
